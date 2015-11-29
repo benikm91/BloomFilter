@@ -1,4 +1,4 @@
-package bkm.bloomfilter;
+package main.bloomfilter;
 
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ public class BloomFilterTest {
 
     @Test
     public void testGetInfo() {
-        //http://hur.st/bloomfilter?n=100&p=0.1
+        // Results from http://hur.st/bloomfilter?n=100&p=0.1
         BloomFilterInfo info = BloomFilter.getInfo(100, 0.1);
         assertTrue(info.n == 100);
         assertTrue(info.p == 0.1);

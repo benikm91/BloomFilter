@@ -1,4 +1,4 @@
-package bkm.bloomfilter;
+package main.bloomfilter;
 import static java.lang.Math.*;
 
 /**

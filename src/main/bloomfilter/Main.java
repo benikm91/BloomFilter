@@ -1,4 +1,4 @@
-package bkm.bloomfilter;
+package main.bloomfilter;
 
 /**
  * Created by Benjamin on 29.11.2015.
