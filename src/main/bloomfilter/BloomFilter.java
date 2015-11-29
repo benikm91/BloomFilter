@@ -19,7 +19,7 @@ public class BloomFilter {
         BloomFilterInfo info = BloomFilter.getInfo(n, p);
         // generate info.k hash functions
         hashes = new HashFunction[(int) info.k];
-        for (int i = 0; i < hashes.length; i++) hashes[i] = Hashing.murmur3_128();
+        for (int i = 0; i < hashes.length; i++) hashes[i] = Hashing.murmur3_128((int) (Math.random() * 10000));
         // generate info.m bits.
         m = (int) info.m;
         table = new BitSet(m);
@@ -27,7 +27,7 @@ public class BloomFilter {
 
     public void add(String toAdd) {
         for (HashFunction hf : hashes) {
-            int index = hf.hashString(toAdd).asInt() % m;
+            int index = Math.abs(hf.hashString(toAdd).asInt() % m);
             table.set(index);
         }
     }
