@@ -43,6 +43,7 @@ public class BloomFilter {
     /**
      * Get the info for the best BloomFilter configuration by the number of expected elements in the BloomFilter.
      * @param n Number of expected elements in BloomFilter.
+     * @param p Desired false positive probability
      * @return info for best BloomFilter configuration.
      */
     public static BloomFilterInfo getInfo(int n, double p) {
